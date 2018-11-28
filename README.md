@@ -1,4 +1,4 @@
-![](logo.png)
+![](logo.gif)
 
 # Programming Test - QUT Data Services
 ##### Synopsis
@@ -29,7 +29,7 @@ The first command will compile the program and ensure that all the unit test cas
 
 The second will run the console application, allowing you to connect locally to the application, should you wish, with your [browser](http://localhost:8080/pollservice/1.0/questions) i.e.: `http://localhost:8080/pollservice/1.0/questions`.
  
- **Note:** It is also available over the internet.
+ **Note:** It is also available over the internet and the choice of DynamoDB for the storage will not function correctly, without a local copy.
 
 ##### Test Cases
 

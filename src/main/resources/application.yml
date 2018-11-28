@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /pollservice/1.0
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    edu.qut.data.questions: DEBUG
+

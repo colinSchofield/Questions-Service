@@ -85,9 +85,9 @@ public class QuestionControllerTest {
         listResponseAsString = mapper.writeValueAsString(responseList);
         questionNotFoundResponse = ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 
-        QuestionRequest questionRequest = new QuestionRequest();
-        questionRequest.setQuestion("What is your favourite Fruit?");
-        questionRequest.setChoices(Arrays.asList(new String[]{"Apples", "Pears", "Oranges"}));
+        questionRequest = new QuestionRequest();
+        questionRequest.setQuestion("Favourite programming language?");
+        questionRequest.setChoices(Arrays.asList(new String[]{"Swift", "Python", "Objective-C", "Ruby"}));
 
         questionNotFoundResponse = ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         createResponse = ResponseEntity.status(HttpStatus.CREATED).body(null);
@@ -122,10 +122,11 @@ public class QuestionControllerTest {
                 .andExpect(status().isNotFound());
     }
 
-//    @Test
+    @Test
     public void createQuestionPollTest() throws Exception {
 
-        when(questionService.createQuestionPoll(questionRequest)).thenReturn(createResponse);
+        when(questionValidator.supports(QuestionRequest.class)).thenReturn(true);
+        when(questionService.createQuestionPoll(any())).thenReturn(createResponse);
         mvc.perform(post("/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(postContent)

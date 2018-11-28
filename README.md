@@ -14,7 +14,7 @@ persisting the **questions**, a DynamoDb NoSQL database was used, as this provid
  
 The EC2 is situated behind an ELB and with a mindfulness to production, this would no doubt involve an ASG over multiple Availability Zones.
 
-##### how to run the Application locally
+##### How to run the Application Locally
 You must have the following to run this application:
 - Java 1.8 compiler 
 - Apache maven 3 
@@ -29,11 +29,11 @@ The first command will compile the program and ensure that all the unit test cas
 
 The second will run the console application, allowing you to connect locally to the application, should you wish, with your [browser](http://localhost:8080/pollservice/1.0/questions) i.e.: `http://localhost:8080/pollservice/1.0/questions`.
  
- **Note:** It is also available over the internet and the choice of DynamoDB for the storage will not function correctly, without a local copy.
+**Note:** It is also available over the internet, however, the choice of DynamoDB for the storage will not function correctly without a local copy.
 
 ##### Test Cases
 
-During the design and coding of this application, particularly attention has been allowed for TDD. A Spring​ ​Boot​ ​controller​ ​test​ ​case has been created.
+During the design and coding of this application, particularly attention has been paid to TDD. A Spring​ ​Boot​ ​controller​ ​test​ ​case has been created along with a Mockito Unit Test for the internal Service layer.
 
 Colin Schofield   
 e: colin_sch@yahoo.com  

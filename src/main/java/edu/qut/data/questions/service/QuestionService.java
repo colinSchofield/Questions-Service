@@ -37,8 +37,8 @@ public class QuestionService {
         log.debug("About to list all poll questions");
         Iterable<QuestionPoll> questionList = questionPollRepository.findAll();
 
-        if (!questionList.iterator().hasNext()) {
-            ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        if (questionList == null || !questionList.iterator().hasNext()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
         List<Question> jsonResponse = new ArrayList<>();

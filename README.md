@@ -33,7 +33,8 @@ The second will run the console application, allowing you to connect locally to 
 
 ##### Test Cases
 
-During the design and coding of this application, particularly attention has been paid to TDD. A Spring​ ​Boot​ ​controller​ ​test​ ​case has been created along with a Mockito Unit Test for the internal Service layer.
+During the design and coding of this application, particularly attention has been paid to TDD. A Spring​ ​Boot​ ​controller​ ​test​ ​case has been created along with a Mockito Unit Test for the internal Service layer. 
+The Intellij code coverage was run, revealing that **100%** of classes and **72%** of lines were covered by the Unit/Integration Tests.
 
 Colin Schofield   
 e: colin_sch@yahoo.com  
